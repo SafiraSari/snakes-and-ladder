@@ -61,7 +61,6 @@ public class Player {
 		this.position = p;
 	}
 	
-	
 	// ACCESSORS
 	/**
 	 * Accessor method for the player's name
