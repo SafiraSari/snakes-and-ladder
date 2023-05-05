@@ -31,8 +31,9 @@ public class LadderAndSnake {
 	{0,0,0,-4,0,0,0,0,0,0},			// Row 7, Positions 61 - 70
 	{20,0,0,0,0,0,0,0,-60,20},		// Row 8, Positions 80 - 71
 	{0,0,0,0,0,0,0,0,0,0},			// Row 9, Positions 81 - 90
-	{0,0,-20,-21,0,-71,0,-25,0,0}};	// Row 10, Positions 100 - 91
-	// 0 = position remains, + means ladder (go up x amount of cells), - means snake (go down x amount of cells).
+	{0,0,-20,-21,0,-71,0,-25,0,0}};		// Row 10, Positions 100 - 91
+	// number on the board indicates the change to the current position
+	// 0 = position remains, positive # = ladder (go up x amount of cells), negative # = means snake (go down x amount of cells).
 	
 
 	// Creating 2 Player objects.
@@ -243,9 +244,9 @@ public class LadderAndSnake {
 		int difference = 0;
 		int finalPos = 0;
 		
-		currentDice = flipDice();												// Current player rolls a dice.
+		currentDice = flipDice();						// Current player rolls a dice.
 		newPos = currentPlayer.getPosition() + currentDice;				
-		currentPlayer.setPosition(newPos);										// Current player's new position is updated.
+		currentPlayer.setPosition(newPos);					// Current player's new position is updated.
 		System.out.print(currentPlayer.getName() + " rolled a " + currentDice);
 		
 		// Player backtracks if position exceeds 100.
@@ -256,13 +257,13 @@ public class LadderAndSnake {
 		System.out.print(" - Now at position " + currentPlayer.getPosition() + "\n");
 		
 		
-		difference = checkForSnakeOrLadder(currentPlayer.getPosition());		// Checking for a snake/ladder.
+		difference = checkForSnakeOrLadder(currentPlayer.getPosition());	// Checking for a snake/ladder.
 		currentPlayer.setPosition(difference + currentPlayer.getPosition());	// Update current player's position if necessary
 		if (difference != 0) {
 			System.out.print(" --> Currently at position " + currentPlayer.getPosition() + "\n");
 		}
 	
-		checkForPlayer(currentPlayer, otherPlayer);						// Checking if current player's position overlaps with another.
+		checkForPlayer(currentPlayer, otherPlayer);				// Checking if current player's position overlaps with another.
 	}
 	
 
