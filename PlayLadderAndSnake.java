@@ -25,7 +25,6 @@ public class PlayLadderAndSnake {
 		
 		System.out.println("\nWelcome to the COMP-249 Snakes & Ladder game, created by Safira Sari!\n" 
 						+ "_____________________________________________________________________\n");
-		
 		System.out.println("BEFORE WE START PLAYING...\n");
 		System.out.print("Please enter the number of players: ");
 		int userNumOfPlayers = input.nextInt();
@@ -43,15 +42,12 @@ public class PlayLadderAndSnake {
 		} else {
 			System.out.println("Default names kept.\n");
 		}
+		
 		game.promptContinue();
 		game.displayRules();
-		
-		
 		game.decideTurnOrder();
-		
 		game.play();
 
-		
 		input.close();
 		System.exit(0);
 		
