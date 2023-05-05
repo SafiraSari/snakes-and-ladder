@@ -1,8 +1,8 @@
 // -----------------------------------------------------
-// Assignment #1 - Snakes & Ladder: Part 1
+// Snakes & Ladder
 // COMP-249: Object Oriented Programming II
-// Written by: Safira Sari - 40249017
-// Due Date: Friday, February 3rd, 2023
+// Written by: Safira Sari
+// Date: Friday, February 3rd, 2023
 // -----------------------------------------------------
 
 import java.util.Scanner;
