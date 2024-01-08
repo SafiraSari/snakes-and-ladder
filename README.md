@@ -1,2 +1,2 @@
 # snakes-and-ladder
-> Snakes and Ladder simulation game coded in Java.
+> Snakes and Ladder simulation game coded in Java. Includes Javadoc documentation.
